@@ -2,7 +2,7 @@ lazy val main = (project in file("."))
   .enablePlugins(SbtWeb)
   .dependsOn(a)
   .settings(
-    libraryDependencies += "org.webjars" % "requirejs" % "2.1.11-1",
+    libraryDependencies += "org.webjars.npm" % "requirejs" % "2.2.0",
     pipelineStages := Seq(rjs)
   )
 

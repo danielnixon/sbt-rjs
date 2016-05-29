@@ -1,4 +1,4 @@
-addSbtPlugin("com.typesafe.sbt" % "sbt-rjs" % sys.props("project.version"))
+addSbtPlugin("org.danielnixon" % "sbt-rjs" % sys.props("project.version"))
 
 resolvers ++= Seq(
   Resolver.mavenLocal,

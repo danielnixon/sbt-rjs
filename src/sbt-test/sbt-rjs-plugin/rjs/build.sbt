@@ -1,7 +1,7 @@
 lazy val root = (project in file(".")).enablePlugins(SbtWeb)
 
 libraryDependencies ++= Seq(
-  "org.webjars" % "requirejs" % "2.1.11-1",
+  "org.webjars.npm" % "requirejs" % "2.2.0",
   "org.webjars" % "underscorejs" % "1.6.0-1",
   "org.webjars" % "knockout" % "2.3.0",
   "org.webjars" % "bootstrap" % "3.2.0"

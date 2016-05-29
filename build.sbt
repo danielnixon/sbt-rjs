@@ -1,35 +1,43 @@
 sbtPlugin := true
 
-organization := "com.typesafe.sbt"
+organization := "org.danielnixon"
+licenses := Seq("The Apache Software License, Version 2.0" -> url("http://www.apache.org/licenses/LICENSE-2.0.txt"))
+publishMavenStyle := true
+publishArtifact in Test := false
+publishTo := {
+  val nexus = "https://oss.sonatype.org/"
+  if (isSnapshot.value)
+    Some("snapshots" at nexus + "content/repositories/snapshots")
+  else
+    Some("releases" at nexus + "service/local/staging/deploy/maven2")
+}
+homepage := Some(url("https://github.com/danielnixon/sbt-rjs"))
+pomExtra := (
+  <scm>
+    <url>git@github.com:danielnixon/sbt-rjs.git</url>
+    <connection>scm:git:git@github.com:danielnixon/sbt-rjs.git</connection>
+  </scm>
+  <developers>
+    <developer>
+      <id>danielnixon</id>
+      <name>Daniel Nixon</name>
+      <url>https://danielnixon.org/</url>
+    </developer>
+  </developers>)
 
 name := "sbt-rjs"
 
 version := "1.0.8-SNAPSHOT"
 
-scalaVersion := "2.10.4"
+scalaVersion := "2.10.6"
 
 scalacOptions += "-feature"
 
 libraryDependencies ++= Seq(
-  "org.webjars" % "rjs" % "2.1.15"
+  "org.webjars.npm" % "requirejs" % "2.2.0"
 )
 
-resolvers ++= Seq(
-  "Typesafe Releases Repository" at "http://repo.typesafe.com/typesafe/releases/",
-  Resolver.url("sbt snapshot plugins", url("http://repo.scala-sbt.org/scalasbt/sbt-plugin-snapshots"))(Resolver.ivyStylePatterns),
-  Resolver.sonatypeRepo("snapshots"),
-  "Typesafe Snapshots Repository" at "http://repo.typesafe.com/typesafe/snapshots/",
-  Resolver.mavenLocal
-)
-
-addSbtPlugin("com.typesafe.sbt" % "sbt-js-engine" % "1.0.1")
-
-publishMavenStyle := false
-
-publishTo := {
-  if (isSnapshot.value) Some(Classpaths.sbtPluginSnapshots)
-  else Some(Classpaths.sbtPluginReleases)
-}
+addSbtPlugin("com.typesafe.sbt" % "sbt-js-engine" % "1.1.4")
 
 scriptedSettings
 
