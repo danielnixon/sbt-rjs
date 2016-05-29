@@ -2,6 +2,7 @@ sbt-rjs
 =======
 
 [![Build Status](https://api.travis-ci.org/danielnixon/sbt-rjs.png?branch=master)](https://travis-ci.org/danielnixon/sbt-rjs)
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/org.danielnixon/sbt-rjs/badge.svg)](https://maven-badges.herokuapp.com/maven-central/org.danielnixon/sbt-rjs)
 
 Setup
 -----
