@@ -12,7 +12,7 @@ publishTo := {
     Some("releases" at nexus + "service/local/staging/deploy/maven2")
 }
 homepage := Some(url("https://github.com/danielnixon/sbt-rjs"))
-pomExtra := (
+pomExtra := {
   <scm>
     <url>git@github.com:danielnixon/sbt-rjs.git</url>
     <connection>scm:git:git@github.com:danielnixon/sbt-rjs.git</connection>
@@ -23,7 +23,8 @@ pomExtra := (
       <name>Daniel Nixon</name>
       <url>https://danielnixon.org/</url>
     </developer>
-  </developers>)
+    </developers>
+}
 
 name := "sbt-rjs"
 
@@ -34,7 +35,7 @@ scalaVersion := "2.10.6"
 scalacOptions += "-feature"
 
 libraryDependencies ++= Seq(
-  "org.webjars.npm" % "requirejs" % "2.2.0"
+  "org.webjars.npm" % "requirejs" % "2.3.2"
 )
 
 addSbtPlugin("com.typesafe.sbt" % "sbt-js-engine" % "1.1.4")
