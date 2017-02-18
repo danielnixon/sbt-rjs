@@ -28,7 +28,7 @@ pomExtra := {
 
 name := "sbt-rjs"
 
-version := "1.0.9"
+version := "1.0.10-SNAPSHOT"
 
 scalaVersion := "2.10.6"
 
