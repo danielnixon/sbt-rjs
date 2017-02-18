@@ -4,6 +4,8 @@ sbt-rjs
 [![Build Status](https://api.travis-ci.org/danielnixon/sbt-rjs.svg?branch=master)](https://travis-ci.org/danielnixon/sbt-rjs)
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/org.danielnixon/sbt-rjs/badge.svg)](https://maven-badges.herokuapp.com/maven-central/org.danielnixon/sbt-rjs)
 
+A fork of the seemingly abandoned [sbt-rjs](https://github.com/sbt/sbt-rjs) plugin.
+
 Setup
 -----
 
