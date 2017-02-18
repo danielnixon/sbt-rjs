@@ -17,12 +17,12 @@ pomExtra := {
     <url>git@github.com:danielnixon/sbt-rjs.git</url>
     <connection>scm:git:git@github.com:danielnixon/sbt-rjs.git</connection>
   </scm>
-  <developers>
-    <developer>
-      <id>danielnixon</id>
-      <name>Daniel Nixon</name>
-      <url>https://danielnixon.org/</url>
-    </developer>
+    <developers>
+      <developer>
+        <id>danielnixon</id>
+        <name>Daniel Nixon</name>
+        <url>https://danielnixon.org/</url>
+      </developer>
     </developers>
 }
 
@@ -39,6 +39,7 @@ libraryDependencies ++= Seq(
 )
 
 addSbtPlugin("com.typesafe.sbt" % "sbt-js-engine" % "1.1.4")
+addSbtPlugin("com.typesafe.sbt" % "sbt-web" % "1.4.0")
 
 scriptedSettings
 
